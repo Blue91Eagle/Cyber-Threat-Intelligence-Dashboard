@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cyber Threats</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<header>
+    <h1>Cyber Threat Intelligence Dashboard</h1>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/threats">Threats</a>
+        <a href="/add">Add Threat</a>
+        <a href="/phishing">Phishing</a>
+        <a href="/password">Password Security</a>
+        <a href="/tips">Security Tips</a>
+    </nav>
+</header>
+
+<main>
+    <h2>Saved Cyber Threat Reports</h2>
+
+    <div class="card-container">
+
+        {% for threat in threats %}
+        <div class="card">
+            <h3>{{ threat[1] }}</h3>
+            <p>{{ threat[2] }}</p>
+        </div>
+        {% endfor %}
+
+    </div>
+</main>
+
+</body>
+</html>

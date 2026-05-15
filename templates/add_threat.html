@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Threat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<header>
+    <h1>Cyber Threat Intelligence Dashboard</h1>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/threats">Threats</a>
+        <a href="/add">Add Threat</a>
+        <a href="/phishing">Phishing</a>
+        <a href="/password">Password Security</a>
+        <a href="/tips">Security Tips</a>
+    </nav>
+</header>
+
+<main>
+    <h2>Add New Threat Report</h2>
+
+    <form method="POST">
+
+        <input type="text" name="title" placeholder="Threat title" required>
+
+        <br><br>
+
+        <textarea name="description" placeholder="Threat description" required></textarea>
+
+        <br><br>
+
+        <button type="submit">Save Threat</button>
+
+    </form>
+</main>
+
+</body>
+</html>
